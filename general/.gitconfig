@@ -1,0 +1,12 @@
+[user]
+	name = Kiril Molchanov
+	email = molchkir@fit.cvut.cz
+[core]
+	editor = vim
+[alias]
+	st = status
+	cm = commit
+	co = checkout
+	br = branch
+	ll = log --all --oneline --graph --decorate
+	sw = switch

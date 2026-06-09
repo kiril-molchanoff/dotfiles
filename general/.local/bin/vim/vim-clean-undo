@@ -1,0 +1,18 @@
+#!/bin/bash
+
+cnt=0
+
+for file in "$HOME/.vim/undo/"*
+do
+  orig="$(basename "$file")"    # basename
+  orig="${orig//%//}"           # parameter expansion - replace % with /
+
+  if [[ ! -f "$orig" ]]
+  then
+    \rm "$file"
+    echo -e "Removed: $file\n(orig: $orig)"
+    ((++cnt))
+  fi
+done
+
+echo -e "\n$cnt undo file(s) removed."

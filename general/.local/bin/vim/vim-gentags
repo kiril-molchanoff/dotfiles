@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# generate C/C++ tags (for VIM)
+proj_dir="${PWD////%}"                  # replace / with %
+tags_file="$HOME/.vim/tags/$proj_dir"
+ctags -R --c++-kinds=+p --fields=+iaS --extras=+q -f "$tags_file" .
+
+echo -e "\nTags written to $proj_dir."

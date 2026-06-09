@@ -1,0 +1,30 @@
+" =========================================
+"     OVERALL [VIM] SETUP
+" =========================================
+
+
+set nocompatible            " disable legasy
+filetype plugin indent on   " filetype detection, plugins, etc.
+syntax enable 
+
+
+let g:dotfiles = $MY_DOTFILES
+
+" include config files [.vim]
+for file in split(glob(g:dotfiles . '/vim/config/*.vim'), '\n')
+  source `=file`
+endfor
+"source `=g:dotfiles . '/vim/config/core.vim'`
+"source `=g:dotfiles . '/vim/config/file.vim'`
+"source `=g:dotfiles . '/vim/config/edit.vim'`
+"source `=g:dotfiles . '/vim/config/ui.vim'`
+"source `=g:dotfiles . '/vim/config/keymaps.vim'`
+"source `=g:dotfiles . '/vim/config/search.vim'`
+"source `=g:dotfiles . '/vim/config/completion.vim'`
+
+" include add-ons [.vim]
+for file in split(glob(g:dotfiles . '/vim/addons/*.vim'), '\n')
+  source `=file`
+endfor
+"source `=g:dotfiles . '/vim/addons/programming.vim'`
+"source `=g:dotfiles . '/vim/addons/plugins.vim'`

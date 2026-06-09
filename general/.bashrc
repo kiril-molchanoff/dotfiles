@@ -1,0 +1,25 @@
+#========================================
+#   OVERALL [BASH] CONFIG
+#========================================
+
+
+# if not running interactively - don't do anything
+if [[ $- != *i* ]]; then
+  return
+fi
+
+
+export MY_DOTFILES="$HOME/.dotfiles"
+
+
+# include files [.sh]
+for file in "$MY_DOTFILES/bash/"*.sh; do
+  source "$file"
+done
+#source "$MY_DOTFILES/bash/env.sh"
+#source "$MY_DOTFILES/bash/paths.sh"
+#source "$MY_DOTFILES/bash/prompt.sh"
+#source "$MY_DOTFILES/bash/aliases.sh"
+#source "$MY_DOTFILES/bash/completion.sh"
+#source "$MY_DOTFILES/bash/custom.sh"
+
