@@ -8,8 +8,6 @@ filetype plugin indent on   " filetype detection, plugins, etc.
 syntax enable 
 
 
-let g:dotfiles = $MY_DOTFILES
-
 " include config files [.vim]
 for file in split(glob(g:dotfiles . '/vim/config/*.vim'), '\n')
   source `=file`
