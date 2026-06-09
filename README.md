@@ -16,7 +16,7 @@ Current config files:
 
   ## .vimrc:
   ```vim
-    let g:dotfiles = '/opt/dotfiles'
+    let g:dotfiles = 'directory'
     source `=g:dotfiles . '/general/vimrc'
   ```
 
