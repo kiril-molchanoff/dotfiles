@@ -9,9 +9,6 @@ if [[ $- != *i* ]]; then
 fi
 
 
-export MY_DOTFILES="$HOME/.dotfiles"
-
-
 # include files [.sh]
 for file in "$MY_DOTFILES/bash/"*.sh; do
   source "$file"
